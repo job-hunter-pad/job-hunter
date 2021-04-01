@@ -40,6 +40,7 @@ They are stored in a `.env` file
 - ZOOKEEPER_LOGS_BIND_MOUNT
 
 > Example:
+> 
 > `ZOOKEEPER_DATA_BIND_MOUNT=./persistance/zookeeper/data`
 > `ZOOKEEPER_LOGS_BIND_MOUNT=./persistance/zookeeper/logs`
 
