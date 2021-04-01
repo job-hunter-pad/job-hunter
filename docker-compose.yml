@@ -13,33 +13,33 @@ services:
   mongodb:
     image: "mongo"
     volumes:
-      - mongo_data:/data/db
+      - ${MONGODB_BIND_MOUNT}:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGODB_USERNAME}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGODB_PASSWORD}
+    ports:
+      - "27017:27017"
 
   zookeeper:
-    image: "bitnami/zookeeper"
+    image: confluentinc/cp-zookeeper
     ports:
       - "2181:2181"
     volumes:
-      - "zookeeper_data:/bitnami"
+      - ${ZOOKEEPER_DATA_BIND_MOUNT}:/var/lib/zookeeper/data
+      - ${ZOOKEEPER_LOGS_BIND_MOUNT}:/var/lib/zookeeper/log
     environment:
-      - ALLOW_ANONYMOUS_LOGIN=yes
+      - ZOOKEEPER_TICK_TIME=2000
+      - ZOOKEEPER_CLIENT_PORT=2181
 
   kafka:
-    image: "bitnami/kafka"
+    image: confluentinc/cp-kafka
     ports:
       - "9092:9092"
     volumes:
-      - "kafka_data:/bitnami"
+      - ${KAFKA_BIND_MOUNT}:/var/lib/kafka/data
     environment:
-      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
-      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
     depends_on:
       - zookeeper
-
-volumes:
-  mongo_data:
-  zookeeper_data:
-  kafka_data:
