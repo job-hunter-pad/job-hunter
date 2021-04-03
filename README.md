@@ -12,6 +12,12 @@
 
 ## How to Build
 
+### Update Docker Compose Images
+
+```
+docker-compose pull
+```
+
 ### Build Docker Compose 
 
 ```
