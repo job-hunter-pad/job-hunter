@@ -1,12 +1,12 @@
 version: "3.8"
 services:
   apigateway:
-    image: "jobhunterpad/job-hunter-api-gateway"
+    image: "jobhunterpad/job-hunter-api-gateway:latest"
     ports:
       - "8090:80"
 
   frontend:
-    image: "jobhunterpad/job-hunter-frontend"
+    image: "jobhunterpad/job-hunter-frontend:latest"
     depends_on:
       - apigateway
 
@@ -45,6 +45,11 @@ services:
       - zookeeper
 
   authentication:
-    image: "jobhunterpad/job-hunter-authentication"
+    image: "jobhunterpad/job-hunter-authentication:latest"
     depends_on:
+      - kafka
+  
+  emailservice:
+    image: "jobhunterpad/job-hunter-emailservice:latest"
+    depends_on: 
       - kafka

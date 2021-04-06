@@ -8,6 +8,7 @@
 | Job Hunter Frontend | https://github.com/job-hunter-pad/job-hunter-frontend |
 | Job Hunter Authentication Service | https://github.com/job-hunter-pad/job-hunter-authentication |
 | Job Hunter Email Service | https://github.com/job-hunter-pad/job-hunter-emailservice |
+| Job Hunter Employer Service | https://github.com/job-hunter-pad/job-hunter-employer-service |
 
 
 ## How to Build
