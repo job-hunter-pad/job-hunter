@@ -53,3 +53,8 @@ services:
     image: "jobhunterpad/job-hunter-emailservice:latest"
     depends_on: 
       - kafka
+
+  employerservice:
+    image: "jobhunterpad/job-hunter-employer-service:latest"
+    depends_on: 
+      - kafka
