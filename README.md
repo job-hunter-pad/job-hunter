@@ -32,25 +32,16 @@ docker-compose down
 
 ## Environment Variables
 
-They are stored in a `.env` file
+Environment Variables are stored in a `.env` file in the same folder with the `docker-compose.yml` file
 
 ### Kafka
 
 - KAFKA_BIND_MOUNT
 
-> Example: 
-> `KAFKA_BIND_MOUNT=./persistance/kafka`
-
 ### Zookeeper
 
 - ZOOKEEPER_DATA_BIND_MOUNT
 - ZOOKEEPER_LOGS_BIND_MOUNT
-
-> Example:
-> 
-> `ZOOKEEPER_DATA_BIND_MOUNT=./persistance/zookeeper/data`
-> 
-> `ZOOKEEPER_LOGS_BIND_MOUNT=./persistance/zookeeper/logs`
 
 ### MongoDB
 
@@ -58,6 +49,13 @@ They are stored in a `.env` file
 - MONGODB_PASSWORD
 - MONGODB_BIND_MOUNT
 
-> Example:
-> `MONGODB_BIND_MOUNT=./persistance/mongodb`
+### Env File Example
+```
+MONGODB_BIND_MOUNT=./persistance/mongodb
+
+ZOOKEEPER_DATA_BIND_MOUNT=./persistance/zookeeper/data
+ZOOKEEPER_LOGS_BIND_MOUNT=./persistance/zookeeper/logs
+ 
+KAFKA_BIND_MOUNT=./persistance/kafka
+```
 
