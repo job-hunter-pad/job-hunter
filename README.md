@@ -2,13 +2,14 @@
 
 ### Services Links
 
-| Component | Link|
+| Component | Link |
 | ------ | ------ |
 | Job Hunter API Gateway | https://github.com/job-hunter-pad/job-hunter-api-gateway |
 | Job Hunter Frontend | https://github.com/job-hunter-pad/job-hunter-frontend |
 | Job Hunter Authentication Service | https://github.com/job-hunter-pad/job-hunter-authentication |
 | Job Hunter Email Service | https://github.com/job-hunter-pad/job-hunter-emailservice |
 | Job Hunter Employer Service | https://github.com/job-hunter-pad/job-hunter-employer-service |
+| Job Hunter Freelancer Service | https://github.com/job-hunter-pad/job-hunter-freelancer-service |
 
 
 ## How to Build
