@@ -63,3 +63,8 @@ services:
     image: "jobhunterpad/job-hunter-freelancer-service:latest"    
     depends_on: 
       - kafka
+
+  paymentservice:
+    image: "jobhunterpad/job-hunter-payment-service:latest"
+    depends_on: 
+      - kafka

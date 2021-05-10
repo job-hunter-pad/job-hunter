@@ -10,6 +10,7 @@
 | Job Hunter Email Service | https://github.com/job-hunter-pad/job-hunter-emailservice |
 | Job Hunter Employer Service | https://github.com/job-hunter-pad/job-hunter-employer-service |
 | Job Hunter Freelancer Service | https://github.com/job-hunter-pad/job-hunter-freelancer-service |
+| Job Hunter Payment Service | https://github.com/job-hunter-pad/job-hunter-payment-service | 
 
 
 ## How to Build
